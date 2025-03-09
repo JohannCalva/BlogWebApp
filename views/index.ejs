@@ -1,0 +1,36 @@
+<%-include("partials/header.ejs")  %>
+
+<% if (postsPublished && postsPublished.length > 0) { %>
+    <h1 class="pacifico-regular">Posts:</h1>
+    <ul>
+        <% for (let i = 0; i < postsPublished.length; i++) { %>
+            <li class="title"><%= postsPublished[i].title %></li>
+            <li class="content author"><strong>Author:</strong> <%= postsPublished[i].author %></li>
+            <li class="content"><%= postsPublished[i].content %></li>
+                        
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start my-3">
+
+                <form action="/edit" method="GET">
+                    <input type="hidden" name="postIndex" value="<%= i %>">
+                    <input type="submit" class="btn btn-outline-secondary" value="Edit">
+                </form>
+                
+                <form action="/delete" method="POST">
+                    <input type="hidden" name="postIndex" value="<%= i %>">
+                    <input type="submit" class="btn btn-danger" value="Delete">
+                </form>
+
+            </div>
+            
+            <hr>
+        <% } %>
+    </ul>
+<% } else { %>
+    <h1 class="pacifico-regular">Welcome!</h1>
+    <h2 class="pacifico-regular">There are no posts yet. Enter your first post!</h1>
+<% } %>
+<hr />
+<form action="/new" method="GET">
+    <input type="submit" class="btn btn-primary" value="+ New Post">
+</form>
+<%-include("partials/footer.ejs")  %>

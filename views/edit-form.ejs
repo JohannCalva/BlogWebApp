@@ -1,0 +1,20 @@
+<%-include("partials/header.ejs")  %>
+
+<form action="/save" method="POST">
+    <input type="hidden" name="postIndex" value="<%= postIndex %>">
+    <div class="mb-3">
+        <label for="post-title" class="form-label"><strong>Title</strong></label>
+        <input type="text" class="form-control" name="title" value="<%= post.title %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="post-author" class="form-label"><strong>Author</strong></label>
+        <input type="text" class="form-control" name="author" value="<%= post.author %>" required>
+    </div>
+    <div class="mb-3">
+        <label for="post-content" class="form-label"><strong>Content</strong></label>
+        <input type="text" class="form-control" name="content" value="<%= post.content %>" required>
+    </div>
+    <input type="submit" class="btn btn-primary" value="Save Changes">
+</form>
+
+<%-include("partials/footer.ejs")  %>

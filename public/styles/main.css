@@ -1,0 +1,60 @@
+header{
+    background-color: #F6F8D5;
+}
+#brand-icon{
+    height: 2rem;
+}
+header, footer{
+    min-height: 50px;
+}
+
+.container{
+    margin: 20px auto;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+footer{
+    width: 100%;
+    background-color: #205781;
+    display: flex;
+    justify-content: center;
+    padding: 20px 50px;
+}
+
+.copyright{
+    color: #F6F8D5;
+    margin: 0%;
+}
+
+.title {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 500;
+    font-size: 1.75rem;
+    font-style: normal;
+}
+
+.content{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.author{
+    color: #205781;
+}
+
+.pacifico-regular {
+    color: #205781;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+ul {
+    list-style-type: none;
+}
